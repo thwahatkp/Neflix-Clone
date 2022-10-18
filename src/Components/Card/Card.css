@@ -10,13 +10,17 @@
     overflow-y: hidden;
 }
 .poster{
-    max-height: 250px;
+    max-height: 200px;
+    margin-right: 13px;
+}
+.smallPoster{
+    max-height: 150px;
     margin-right: 13px;
 }
 .posters::-webkit-scrollbar{
     display:none;
 }
-.poster:hover{
+.poster:hover,.smallPoster:hover{
     /* box-shadow: 0 0 8px rgb(255, 0, 0); */
         border-radius: 12px;
     box-shadow: 0px 0px 12px 6px rgba(238, 8, 8, 0.822);
