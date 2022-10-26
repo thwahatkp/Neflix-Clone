@@ -6,10 +6,18 @@ import './Banner.css'
 let Rating = null
 function Banner() {
   const [movie, setMovie] = useState()
+  const [showing,setShow] = useState(2)
+  // let count = 0
+  // function setBannerTime(){
+  //   +
+  //   // count > 20 ? count = 0 : count = count
+  //   // count = count + 1
+  //   console.log(count);
+  //   setShow(count)
+  // }   setInterval(setBannerTime,5000);
   useEffect(() => {
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
       // console.log(response.data.results[0]);
-      let showing = 0
       setMovie(response.data.results[showing])
       // console.log(response.data.results[showing]);
       if (response.data.results[showing].vote_average > parseInt(response.data.results[showing].vote_average) + .500) {
